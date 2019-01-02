@@ -1,0 +1,209 @@
+/*!
+Theme Name: sellmark
+Theme URI: http://underscores.me/
+Author: sellmark
+Author URI: http://sellmark
+Description: sellmark
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: sellmark
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+sellmark is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+	--------------------------------------------------------------*/
+  body{
+    font-variant-ligatures: none;
+  }
+
+  .gradient{
+    background: #0097DD;
+    background: -moz-linear-gradient(top,  #0097DD 0%, #7db9e8 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0097DD), color-stop(100%,#7db9e8));
+    background: -webkit-linear-gradient(top,  #0097DD 0%,#7db9e8 100%);
+    background: -o-linear-gradient(top,  #0097DD 0%,#7db9e8 100%);
+    background: -ms-linear-gradient(top,  #0097DD 0%,#7db9e8 100%);
+    background: linear-gradient(to bottom,  #0097DD 0%,#7db9e8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0097DD', endColorstr='#7db9e8',GradientType=0 );
+    background-attachment: fixed;"
+  }
+
+
+  body {
+    margin-top: 30px;
+    background-color: #eee;
+  }
+
+  .faq-nav {
+    flex-direction: column;
+    margin: 0 0 32px;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 5px rgba(85, 85, 85, 0.15);
+  }
+  .faq-nav .nav-link {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 13px 16px;
+    background-color: #fff;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    color: #616161;
+    transition: background-color 0.2s ease;
+  }
+  .faq-nav .nav-link:hover {
+    background-color: #f6f6f6;
+  }
+  .faq-nav .nav-link.active {
+    background-color: #f6f6f6;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.87);
+  }
+  .faq-nav .nav-link:last-of-type {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom: 0;
+  }
+  .faq-nav .nav-link i.mdi {
+    margin-right: 5px;
+    font-size: 18px;
+    position: relative;
+  }
+
+  .tab-content {
+    box-shadow: 0 1px 5px rgba(85, 85, 85, 0.15);
+  }
+  .tab-content .card {
+    border-radius: 0;
+  }
+  .tab-content .card-header {
+    padding: 15px 16px;
+    border-radius: 0;
+    background-color: #f6f6f6;
+  }
+  .tab-content .card-header h5 {
+    margin: 0;
+  }
+  .tab-content .card-header h5 button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.87);
+    text-align: left;
+    white-space: normal;
+  }
+  .tab-content .card-header h5 button:hover, .tab-content .card-header h5 button:focus, .tab-content .card-header h5 button:active, .tab-content .card-header h5 button:hover:active {
+    text-decoration: none;
+  }
+  .tab-content .card-body p {
+    color: #616161;
+  }
+  .tab-content .card-body p:last-of-type {
+    margin: 0;
+  }
+
+  .accordion > .card:not(:first-child) {
+    border-top: 0;
+  }
+
+  .collapse.show .card-body {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  }
+
+
+
+
+
+
+
+
+
+
+  .read-more-box {
+    height:  230px;
+
+    position: relative;
+    padding: 20px;
+    overflow: hidden;
+    transition: all 1.2s;
+  }
+  .read-more-box .read-more { 
+    position: absolute; 
+    bottom: 0; left: 0;
+    width: 100%; 
+    text-align: center; 
+    margin: 0; 
+    padding: 30px 0 30px 0; 
+
+    /* "transparent" only works here because == rgba(0,0,0,0) */ 
+    background-image: -moz-linear-gradient(top, transparent, #f7f7f7);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, transparent),color-stop(1, #f7f7f7));
+  }
+
+
+  .read-more .btn{
+    position: absolute;
+    top:30px;
+  }
+
+
+  ul.pipes {
+    font-size: 1em;
+    list-style: none;
+    line-height: 2em;
+    padding: 0px;
+    margin: 40px 0px;
+
+  }
+
+  ul.pipes li:before {
+    content: '\2714';
+    font-size: 1.5em;
+    display: inline-block;
+    margin-right: 10px;
+    color: #0097DD;
+    color: green;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+
+
+
+.txt-rotate{
+  font-size: 2.7em !important;
+}
