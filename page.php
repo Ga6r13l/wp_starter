@@ -10,40 +10,14 @@ switch (get_the_ID()) {
 	//STRONA GŁÓWNA
 	case 20:
 	$blocks = array(
-		'widget_1',
-		'head_1',
-		'head_2',
-		//'timeline',
-		'separator_1',
-		'company',
-		'video',
-		'funstats',
-		'zalety',
-		'separator_2',
-
-		'prezentacja',
-		'table',
-		'newsletter',
-		'buy',
-		'tech'
+		'content'
 	);
-	break;
-
-	//KONTATKT
-	case 26:
-	$blocks = array(
-		'contact',
-		'separator_1'
-	);
-	break;
+	break
 
 	//DOMYŚLNE
 	default:
 	$blocks = array(
-		'head_1',
-		'content',
-		'newsletter'
-		//'faq'
+		'content'
 	);
 
 }
